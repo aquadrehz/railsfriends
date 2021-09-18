@@ -1,24 +1,11 @@
-# README
+# Rails Friend App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails simple app using Ruby 3 with Rails 6.1
 
-Things you may want to cover:
+All command used
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails g scaffold friend first_name:string last_name:string email:string
+rails db:migrate
+rails g controller home index
+```
