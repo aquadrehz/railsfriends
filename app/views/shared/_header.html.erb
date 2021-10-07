@@ -9,12 +9,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <!-- ลิงค์ไปหน้า Home -->
-          <a class="nav-link" href="/">Home</a>
+          <!-- ใช้ Helper เพื่อสร้างลิงค์ Home แทน static path -->
+          <%= link_to "Home", home_path, class: "nav-link" %>
         </li>
+        <!-- Embedded ruby เพื่อตรวจสอบและแสดงโค้ดส่วนนี้เมื่อ Sign in แล้วเท่านั้น -->
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <!-- ลิงค์ไปหน้า Sign out  -->
+            <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <!-- ลิงค์ไปหน้า Edit user  -->
+            <%= link_to "Edit Account", edit_user_registration_path, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <!-- ลิงค์ไปหน้า Sign up  -->
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <!-- ลิงค์ไปหน้า Sign in  -->
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
         <li class="nav-item">
-          <!-- ลิงค์ไปหน้า About -->
-          <a class="nav-link" href="about">About</a>
+          <!-- ใช้ Helper เพื่อสร้างลิงค์ About แทน static path -->
+          <%= link_to "About", about_path, class: "nav-link" %>
         </li>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
