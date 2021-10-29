@@ -1,0 +1,14 @@
+{
+  "name": "railsfriend",
+  "version": "1.0.0",
+  "description": "Rails simple app using Ruby 3 with Rails 6.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shumnan.sue",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.6.0"
+  }
+}
