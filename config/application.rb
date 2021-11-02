@@ -18,5 +18,9 @@ module Railsfriends
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Fix Zeitwerk NameError fix
+    config.autoloader = :classic
+
   end
 end
