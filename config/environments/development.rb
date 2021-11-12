@@ -75,4 +75,29 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Google credential
+  ENV['GOOGLE_CLIENT_ID'] = '<Your Client ID>'
+  ENV['GOOGLE_CLIENT_SECRET'] = '<Your Client Secret>'
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
