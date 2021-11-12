@@ -274,9 +274,7 @@ Devise.setup do |config|
   # Configure Google omniauth with proper scope
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], {
     scope: "userinfo.email,userinfo.profile",
-    prompt: "select_account",
-    image_aspect_ratio: "square",
-    image_size: 50,
+    prompt: "select_account"
   }
 
   # ==> Warden configuration
