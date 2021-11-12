@@ -1,6 +1,15 @@
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<!--  Set Flash message to display returned message -->
+  <% if flash.any? %>
+    <div>Flash message:</div>
+    <% flash.each do |key, value| -%>
+      <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
+    <% end -%>
+    <br>
+  <% end %>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
