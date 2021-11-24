@@ -76,6 +76,10 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Set to true to use mock from cypress (Always error if sign in manually)
+  # Set to false to use external Google OAuth2
+  OmniAuth.config.test_mode = true
+
   # Google credential
   ENV['GOOGLE_CLIENT_ID'] = '<Your Client ID>'
   ENV['GOOGLE_CLIENT_SECRET'] = '<Your Client Secret>'
