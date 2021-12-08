@@ -31,13 +31,13 @@ Then('sign out displayed on menu bar', () => {
     Common.signOutDisplayed()
 });
 
-// This will compare all page with scrennshot named 'landing_page' and 0 threshold
+// This will compare all page with screenshot named 'landing_page' and 0 threshold
 Then('landing page is not changes', () => {
     // @ts-ignore Because IDE could not resolve this command directly
     cy.compareSnapshot('landing_page', 0.0);
 });
 
-// This will compare a single component with scrennshot named 'nav_bar' and 0 threshold
+// This will compare a single component with screenshot named 'nav_bar' and 0 threshold
 Then('navigation bar is not changes', () => {
     // @ts-ignore Because IDE could not resolve this command directly
     cy.get('.navbar').compareSnapshot('nav_bar', 0.0);
