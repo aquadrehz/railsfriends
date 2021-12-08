@@ -1,5 +1,8 @@
 {
   "baseUrl": "http://localhost:3000",
   "ignoreTestFiles": ["*.js", "*.md"],
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "screenshotsFolder": "./cypress/snapshots/actual",
+  "trashAssetsBeforeRuns": true,
+  "video": false
 }
